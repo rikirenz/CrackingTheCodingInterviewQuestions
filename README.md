@@ -1,2 +1,2 @@
 # CrackingTheCodingInterviewQuestions
-Excercises Cracking the code interview in JAVA
+Exercises Cracking the code interview in JAVA
