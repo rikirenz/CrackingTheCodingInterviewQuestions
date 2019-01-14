@@ -28,19 +28,15 @@ public class Question_1_4 {
             char[] charArray = s.toCharArray();
             permutations(charArray, 0, charArray.length-1);
         }
-
-
+        
         private static void permutations(char[] s, int lowerBound, int upperBound){
             if (lowerBound == upperBound){
                 for (char a : s) System.out.print(a);  
                 System.out.print(" - ");  
             } else {
-                for (int i = lowerBound; i < upperBound; i++) {
-                    s = swap(s, lowerBound, upperBound);
-                    for (char a : s) System.out.print(a);  
-                    System.out.print(" - ");  
+                for (int i = lowerBound; i <= upperBound; i++) {
+                    s = swap(s, lowerBound, i);
                     permutations(s, lowerBound+1, upperBound);
-                    s = swap(s, lowerBound, upperBound);
                 }    
             }
         }
