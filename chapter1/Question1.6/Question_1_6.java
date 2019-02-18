@@ -65,6 +65,24 @@ public class Question_1_6 {
 
         for (Pair item : counterList) compressedString += item.c.toString() + item.i.toString();
         return compressedString;
+
+        /* Computational cost discussion:
+            The first for loop takes o(N) where n is the size of our string.
+            The second for loop takes in the worst case o(N) as well because if all the letters are different with 
+            the neighbors we have o(N) pairs.
+            The concatentaion of the compressed string takes: n^2
+
+            In this case add a char to the first string will result in cost O(n): 
+            [ c i c i c i c i ] + c 
+              | | | | | | | | 
+              V V V V V V V V 
+            [ c i c i c i c i c]  
+
+            n + n-1 + n-2 + n-3 + ... + 1 = n^2
+
+            So if we do not use a string builder the total computational cost will be O(n^2)
+        
+        */
     }
 
 }
